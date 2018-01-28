@@ -4,9 +4,9 @@ words = a.split()
 def ngram(array, n):
     result = []
 
-    while len(array) > 0:
+    while len(array) > (n - 1):
         result.append(''.join(array[0:n]))
-        del array[0:n]
+        del array[0:1]
     
     print(result)
 
