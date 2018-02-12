@@ -30,4 +30,5 @@ for line in lines:
     if re.search('^\}\}$', line):
         flag = False
 
-print(dic)
+for k, v in dic.items():
+    print(k, v)
