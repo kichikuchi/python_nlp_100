@@ -23,12 +23,8 @@ for line in lines:
             value = line[m.end():]
             value = value.replace('\'\'\'', '')
             if re.search('\[\[(.+)\]\]', value):
-                print(value)
                 value = value.replace('[', '')
                 value = value.replace(']', '')
-                print(value)
-                # m = re.search('\[\[(.+)\]\]', value)
-                # print(m.group())
 
             dic[key] = value
 
@@ -38,5 +34,5 @@ for line in lines:
     if re.search('^\}\}$', line):
         flag = False
 
-# for k, v in dic.items():
-    # print(k, v)
+for k, v in dic.items():
+    print(k, v)
